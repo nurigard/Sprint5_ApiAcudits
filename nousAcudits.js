@@ -14,6 +14,7 @@ function apiAcuditsJson(){
 
 
 function apiAcuditsJson(){
+    let acudit;
     fetch('https://icanhazdadjoke.com/slack')
         .then(function(response){
             return response.json()
@@ -21,6 +22,9 @@ function apiAcuditsJson(){
         .then(function(response){
             //console.log(response)
             console.log(response.attachments[0].fallback)
+            acudit = response.attachments[0].fallback;
+            //document.getElementById("mostraAcudit").innerHTML = acudit;
+            document.querySelector("#mostraAcudit").innerHTML = acudit;
         });
 }
 
