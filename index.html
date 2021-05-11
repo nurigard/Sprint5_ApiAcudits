@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/acudits.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
+
 <body>
     <!--
         Exercici 1
@@ -23,16 +26,30 @@
         Nota: Encara no és necessari maquetar la web, amb mostrar una paraula que indiqui el temps és suficient.
     -->
     
-    <p style="display: inline">Avui:</p> 
-    <p style="display: inline" id="mostrarTemps"></p>
+    
 
-    <h1>Preparat per riure?</h1>
+        <div class="Temps">
+            <div class="apiTemps">
+            <p id="avui">Avui:</p> 
+            <p id="mostrarTemps"></p>
+            </div>
+        </div>
 
-    <input type="button" onclick="apiAcuditsJson()" value="Següent acudit">
+    
+    <div class="container">    
+        <div class="acudit">
+            <div class="titolAcudit">
+            <h1>Preparat per riure?</h1>
+            <img src="img/emoji_fonsBlanc_retallat.jpg">
+            </div>
+            <div class="textAcudit">
+                <p id="mostraAcudit"></p>
+            </div>
+            <input type="button" class="button" onclick="apiAcuditsJson()" value="Següent acudit">
+        </div>
+    </div>
 
-    <p id="mostraAcudit"></p>
-
-<script src="nousAcudits.js"></script>
+    <script src="nousAcudits.js"></script>
 
 </body>
 </html>
